@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4nizz Study Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header" id="home">
+    <a href="#home" class="logo">
+      <span class="logo-name">4nizz</span>
+      <span class="logo-sub">STUDY HUB</span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a>
+      <a href="#countries">Countries</a>
+      <a href="#states">Indian States</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#notes">Notes</a>
+      <a href="#calculator">Calculator</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">LEARN • PRACTICE • GROW</p>
+      <h1>Welcome to <span>4nizz Study Hub</span></h1>
+      <p>Your personal destination for knowledge, practice and learning.</p>
+      <a class="primary-btn" href="#countries">Start Learning</a>
+    </section>
+
+    <section class="section" id="countries">
+      <div class="section-heading">
+        <p class="eyebrow">WORLD GEOGRAPHY</p>
+        <h2>Countries & Capitals</h2>
+        <p>Search countries and discover their capitals.</p>
+      </div>
+      <input id="countrySearch" class="search" type="search"
+        placeholder="Search country or capital...">
+      <p id="countryCount" class="muted"></p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>No.</th><th>Country</th><th>Capital</th></tr></thead>
+          <tbody id="countryTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="states">
+      <div class="section-heading">
+        <p class="eyebrow">INDIA</p>
+        <h2>Indian States & Capitals</h2>
+      </div>
+      <input id="stateSearch" class="search" type="search"
+        placeholder="Search state, territory or capital...">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>No.</th><th>State / Union Territory</th><th>Capital</th></tr></thead>
+          <tbody id="stateTable"></tbody>
+        </table>
+      </div>
+      <p class="muted small">Some states have seasonal or multiple administrative capitals. Check official sources for exam updates.</p>
+    </section>
+
+    <section class="section" id="quiz">
+      <div class="section-heading">
+        <p class="eyebrow">TEST YOURSELF</p>
+        <h2>Geography Quiz</h2>
+      </div>
+      <div class="quiz-card">
+        <p id="quizProgress" class="muted"></p>
+        <h3 id="quizQuestion">Ready to test your knowledge?</h3>
+        <div id="quizOptions" class="quiz-options"></div>
+        <p id="quizFeedback" aria-live="polite"></p>
+        <div class="quiz-actions">
+          <button id="startQuiz" class="primary-btn">Start Quiz</button>
+          <button id="nextQuestion" class="secondary-btn" hidden>Next Question</button>
+        </div>
+        <p id="quizScore" class="score"></p>
+      </div>
+    </section>
+
+    <section class="section" id="notes">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR PERSONAL SPACE</p>
+        <h2>Study Notes</h2>
+        <p>Your notes are saved in this browser on this device.</p>
+      </div>
+      <input id="noteTitle" class="search" type="text" placeholder="Note title">
+      <textarea id="noteText" class="note-input" rows="5"
+        placeholder="Write your study notes here..."></textarea>
+      <button id="saveNote" class="primary-btn">Save Note</button>
+      <p id="noteMessage" class="muted" aria-live="polite"></p>
+      <div id="notesList" class="notes-list"></div>
+    </section>
+
+    <section class="section" id="calculator">
+      <div class="section-heading">
+        <p class="eyebrow">QUICK TOOL</p>
+        <h2>Calculator</h2>
+      </div>
+      <div class="calculator">
+        <input id="calcDisplay" type="text" value="0" readonly aria-label="Calculator display">
+        <div class="calc-grid">
+          <button data-calc="C" class="calc-clear">C</button>
+          <button data-calc="DEL">DEL</button>
+          <button data-calc="(">(</button>
+          <button data-calc=")">)</button>
+          <button data-calc="7">7</button>
+          <button data-calc="8">8</button>
+          <button data-calc="9">9</button>
+          <button data-calc="/">÷</button>
+          <button data-calc="4">4</button>
+          <button data-calc="5">5</button>
+          <button data-calc="6">6</button>
+          <button data-calc="*">×</button>
+          <button data-calc="1">1</button>
+          <button data-calc="2">2</button>
+          <button data-calc="3">3</button>
+          <button data-calc="-">−</button>
+          <button data-calc="0">0</button>
+          <button data-calc=".">.</button>
+          <button data-calc="=" class="calc-equal">=</button>
+          <button data-calc="+">+</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="footer-logo">4nizz Study Hub</a>
+    <p>Learn something new every day.</p>
+    <p>© <span id="year"></span> 4nizz Study Hub</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
